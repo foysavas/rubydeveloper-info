@@ -1,0 +1,19 @@
+%h3 User Signup
+= form_for @user, :action => url(:users), :class => 'typical' do
+  .message= error_messages_for @user
+  %fieldset
+    .i
+      = text_field :name => 'invite_code', :label => 'Invite Code', :value => params[:invite_code]
+    .i
+      = text_field :full_name, :label => 'Full name'
+    .i
+      = text_field :login, :label => 'Email'
+    .i
+      = password_field :password, :label => 'Password'
+    .i
+      = password_field :password_confirmation, :label => 'Confirm Password'
+    .i
+      = select :on_team_awesome, :label => 'Team', :collection => [[false, 'Nice'],[true, 'Awesome']], :value => @user.on_team_awesome
+  .s
+    = submit "Sign Me Up"
+

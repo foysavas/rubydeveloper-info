@@ -1,0 +1,16 @@
+#header
+  #logo
+    %a{ :href => url(:users) }
+      %h1 RubyDeveloper.Info
+      .caption
+        %h2 ( where ruby developers find themselves )
+  #account
+    #account_links
+      - if session.user
+        =link_to "account", url(:edit_user, session.user)
+        = link_to "profile", url(:user, session.user)
+        = link_to "invite", url(:new_invite)
+        =link_to "logout", url(:logout)
+      - else
+        = link_to "signup", url(:new_user)
+        = link_to "login", url(:login)

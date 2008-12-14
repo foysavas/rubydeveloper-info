@@ -1,0 +1,10 @@
+%h3 Please login
+= form :action => slice_url(:merb_auth_slice_password, :perform_login), :method => :put, :class => 'typical' do
+  .message= error_messages_for session.authentication
+  %fieldset
+    .i
+      = text_field :name => 'login', :label => 'Email'
+    .i
+      = password_field :name => 'password', :label => 'Password'
+  .s
+    = submit "Login"

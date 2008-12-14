@@ -1,0 +1,20 @@
+%h3== #{h @user.full_name}
+.photo
+  %img{ :src => @user.gravatar_url(:size => 150) }
+%h4== Part of Team #{@user.on_team_awesome ? 'Awesome' : 'Nice'}
+- unless @user.irc.blank?
+  %h4== IRC Handle: #{h @user.irc}
+- unless @user.github.blank?
+  %h4== Github Username: <a href="http://github.com/#{h @user.github}">#{h @user.github}</a>
+- unless @user.twitter.blank?
+  %h4== Twitter Username: <a href="http://twitter.com/#{h @user.twitter}">#{h @user.twitter}</a>
+- unless @user.homepage.blank?
+  %h4== Homepage: <a href="#{h @user.homepage}">#{h @user.homepage}</a>
+
+- unless @user.projects.empty?
+  %h4== Contributor to #{@user.projects.collect{|p| p.name}.join(', ') }
+
+- if @user.inviter
+  %h4== Invited By: #{link_to h(@user.inviter.full_name), url(:user, @user.inviter)}
+  %h4== Invitation Depth: #{@user.invite_depth}
+%h4== Invitation Score: #{@user.invite_score}

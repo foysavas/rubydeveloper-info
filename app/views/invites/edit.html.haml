@@ -1,0 +1,15 @@
+%h1
+  Invites controller, edit action
+%p
+  Edit this file in
+  %tt
+    app/views/invites/edit.html.erb
+= error_messages_for :invite
+
+= form_for(@invite, :action => url(:invite, @invite)) do
+  %p
+    = submit "Update"
+
+= link_to 'Show', url(:invite, @invite)
+|
+= link_to 'Back', url(:invites)

@@ -1,0 +1,16 @@
+%h1
+  Invites controller, index action
+%p
+  Edit this file in
+  %tt
+    app/views/invites/index.html.erb
+%table
+  %tr
+  - for invite in @invites
+    %tr
+      %td
+        = link_to 'Show', url(:invite, invite)
+      %td
+        = link_to 'Edit', url(:edit_invite,  invite)
+
+= link_to 'New', url(:new_invite)

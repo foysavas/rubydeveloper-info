@@ -1,0 +1,9 @@
+%h3 Invite Someone
+= form_for(@invite, :action => url(:invites), :class => 'typical' ) do
+  .message= error_messages_for @invite
+  %fieldset
+    .i
+      = text_field :email, :label => 'Their email'
+  .s
+    = submit "Invite Them!"
+

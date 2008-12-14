@@ -1,0 +1,21 @@
+<% if message[:notice] %>
+  <div id="message">
+    <div class="notice">
+      <%= h message[:notice] %>
+    </div>
+  </div>
+<% end %>
+<% if message[:warning] %>
+  <div id="message">
+    <div class="warning">
+      <%= h message[:warning] %>
+    </div>
+  </div>
+<% end %>
+<% if message[:error] %>
+  <div id="message">
+    <div class="error">
+      <%= h message[:error] %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+%h3 Edit Your Profile
+= form_for @user, :action => url(:user, @user), :method => :put, :class => 'typical' do
+  .message= error_messages_for @user
+  %fieldset
+    .i
+      = text_field :full_name, :label => 'Full name'
+    .i
+      = text_field :login, :label => 'Email'
+    .i
+      = text_field :irc, :label => 'IRC handle'
+    .i
+      = text_field :github, :label => 'Github username'
+    .i
+      = text_field :twitter, :label => 'Twitter username'
+    .i
+      = text_field :homepage, :label => 'Homepage'
+    .i
+      = select :on_team_awesome, :label => 'Team', :collection => [[false, 'Nice'],[true, 'Awesome']], :value => @user.on_team_awesome
+  .s
+    = submit "Update Profile"
+
+%h3 Change Password
+= form_for @user, :action => url(:user, @user), :method => :put, :class => 'typical' do
+  = error_messages_for @user
+  %fieldset
+    .i
+      = password_field :password, :label => 'Password'
+    .i
+      = password_field :password_confirmation, :label => 'Confirm password'
+  .s
+    = submit "Change Password"
+

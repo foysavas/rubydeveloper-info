@@ -1,0 +1,189 @@
+/*
+MIXINS
+*/
+
+=clearfix
+  display: inline-block
+  &:after
+    content: " "
+    height: 0
+    clear: both
+    visibility: hidden
+    font-size: 0
+  * html &
+    height: 1px
+
+=default_font
+  :font-size 12px
+  :font-family "Arial", "Verdana", sans-serif
+  :font-weight normal
+  :color #000
+  :line-height 1.5em
+
+/*
+DEFAULTS
+*/
+
+body
+  +default_font
+  :text-align center
+  :margin 0 auto
+
+a
+  :text-decoration underline
+  :color #000
+a:hover
+  :text-decoration underline
+
+h1
+  :font-size 40px
+  :letter-spacing -1px
+  :padding 10px
+h2
+  :font-size 17px
+  :font-weight bold
+  :text-align center
+h3
+  :margin-top 35px
+  :margin-bottom 10px
+  :font-weight bold
+  :font-size 18px
+  :text-align center
+
+
+/*
+LAYOUT
+*/
+
+.girdle
+  :width 960px
+  :margin 0 auto
+
+#header
+  :width 960px
+  +clearfix
+  :border-top 8px solid black
+  :font-weight bold
+  a
+    :text-decoration none
+    :font-weight bold
+  a:hover
+    :text-decoration none
+  #logo
+    :margin-top 10px
+    :float left
+    :width 400px
+    .caption
+      :padding-top 5px
+      :padding-bottom 5px
+      :font-size 16px
+      :letter-spacing -1px
+  #account
+    :text-align right
+    :float right
+    :width 500px
+    :font-size 16px
+    :margin-right 10px
+    #account_links
+      :float right
+    a
+      :color white
+      :letter-spacing 1px
+      :display block
+      :float left
+      :font-size 11px
+      :background black
+      :padding 4px
+      :margin 0px 3px
+      :font-weight bold
+    a:hover
+      :padding-top 7px
+
+#footer
+  :border-bottom 1px solid black
+  :font-weight bold
+  :margin-top 20px
+  :margin-bottom 8px
+  a
+    :text-decoration none
+  a:hover
+    :text-decoration underline
+
+
+/*
+MESSAGES
+*/
+#message, .message
+  :font-weight bold
+  :margin 20px auto
+  :width 400px
+  .error, .warning, .notice
+    :padding 10px
+  .warning
+    :border 2px solid yellow
+  .error
+    :border 2px solid red
+  .notice
+    :border 2px solid green
+  :margin-bottom 10px
+
+/*
+FORMS
+*/ 
+
+form.typical
+  :margin 0 auto
+  fieldset
+    :border 1px solid #ccc
+    :padding 20px
+    :margin 15px 0px
+    legend
+      :font-size 14px
+      :font-weight bold
+  label
+    :line-height 1.8em
+  :width 440px
+  .message
+    .error, .warning, .notice
+      :padding 10px
+      :margin-top 25px
+      :margin-bottom 15px
+  .i
+    :width 350px
+    :margin 5px auto
+    input.text, textarea, input.password
+      :width 350px
+  .s
+    input
+      :font-size 14px
+      :font-weight bold
+  .submit
+    :width 400px
+    :text-align center
+    input
+      :margin 5px auto
+  label
+    :display block
+    :font-size 14px
+  label.checkbox
+    :display inline
+  input.error
+    :border-color #880000
+
+
+/*
+TABLES
+*/ 
+
+table.typical
+  :margin 25px auto
+  :width 800px
+  :text-align center
+  :border 1px solid #ccc
+  :padding 10px
+  th
+    :font-weight bold
+  td, th
+    :padding-bottom 10px
+    :text-align center
+    :vertical-align middle

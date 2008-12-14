@@ -1,0 +1,176 @@
+/*  */
+
+
+/*  */
+
+
+body {
+  font-size: 12px;
+  font-family: "Arial", "Verdana", sans-serif;
+  font-weight: normal;
+  color: #000;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 0 auto; }
+
+a {
+  text-decoration: underline;
+  color: #000; }
+
+a:hover {
+  text-decoration: underline; }
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  padding: 10px; }
+
+h2 {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center; }
+
+h3 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; }
+
+/*  */
+
+
+.girdle {
+  width: 960px;
+  margin: 0 auto; }
+
+#header {
+  width: 960px;
+  display: inline-block;
+  border-top: 8px solid black;
+  font-weight: bold; }
+  #header:after {
+    content: " ";
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0; }
+  * html #header {
+    height: 1px; }
+  #header a {
+    text-decoration: none;
+    font-weight: bold; }
+  #header a:hover {
+    text-decoration: none; }
+  #header #logo {
+    margin-top: 10px;
+    float: left;
+    width: 400px; }
+    #header #logo .caption {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 16px;
+      letter-spacing: -1px; }
+  #header #account {
+    text-align: right;
+    float: right;
+    width: 500px;
+    font-size: 16px;
+    margin-right: 10px; }
+    #header #account #account_links {
+      float: right; }
+    #header #account a {
+      color: white;
+      letter-spacing: 1px;
+      display: block;
+      float: left;
+      font-size: 11px;
+      background: black;
+      padding: 4px;
+      margin: 0px 3px;
+      font-weight: bold; }
+    #header #account a:hover {
+      padding-top: 7px; }
+
+#footer {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 8px; }
+  #footer a {
+    text-decoration: none; }
+  #footer a:hover {
+    text-decoration: underline; }
+
+/*  */
+
+
+#message, .message {
+  font-weight: bold;
+  margin: 20px auto;
+  width: 400px;
+  margin-bottom: 10px; }
+  #message .error, #message .warning, #message .notice,   .message .error, .message .warning, .message .notice {
+    padding: 10px; }
+  #message .warning,   .message .warning {
+    border: 2px solid yellow; }
+  #message .error,   .message .error {
+    border: 2px solid red; }
+  #message .notice,   .message .notice {
+    border: 2px solid green; }
+
+/*  */
+
+
+form.typical {
+  margin: 0 auto;
+  width: 440px; }
+  form.typical fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 15px 0px; }
+    form.typical fieldset legend {
+      font-size: 14px;
+      font-weight: bold; }
+  form.typical label {
+    line-height: 1.8em; }
+  form.typical .message .error, form.typical .message .warning, form.typical .message .notice {
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px; }
+  form.typical .i {
+    width: 350px;
+    margin: 5px auto; }
+    form.typical .i input.text, form.typical .i textarea, form.typical .i input.password {
+      width: 350px; }
+  form.typical .s input {
+    font-size: 14px;
+    font-weight: bold; }
+  form.typical .submit {
+    width: 400px;
+    text-align: center; }
+    form.typical .submit input {
+      margin: 5px auto; }
+  form.typical label {
+    display: block;
+    font-size: 14px; }
+  form.typical label.checkbox {
+    display: inline; }
+  form.typical input.error {
+    border-color: #880000; }
+
+/*  */
+
+
+table.typical {
+  margin: 25px auto;
+  width: 800px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px; }
+  table.typical th {
+    font-weight: bold; }
+  table.typical td, table.typical th {
+    padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle; }

@@ -1,0 +1,24 @@
+%table.typical.users
+  %thead
+    %tr
+      %th
+      %th Name
+      %th Invited By
+      %th Invitation Depth
+      %th Invitation Score
+      %th Team
+  %tbody
+    - @users.each do |u|
+      %tr
+        %td
+          %a{ :href => url(:user, u) }
+            %img{ :src => u.gravatar_url(:size => 35)}
+        %td= link_to h(u.full_name), url(:user, u)
+        - if u.inviter
+          %td= link_to h(u.inviter.full_name), url(:user, u.inviter)
+        - else
+          %td self
+        %td= u.invite_depth
+        %td= u.invite_score
+        %td== #{u.on_team_awesome ? 'Awesome' : 'Nice' }
+= paginate(@current_page, @user_count, :inner_window => 5)

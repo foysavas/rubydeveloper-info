@@ -1,0 +1,6 @@
+= css_include_tag 'resets', 'generic'
+= include_required_css
+/[if IE]
+  = css_include_tag 'ie'
+/[if IE 7]
+  = css_include_tag 'ie7'
