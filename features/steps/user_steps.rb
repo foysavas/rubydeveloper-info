@@ -15,7 +15,7 @@ Given "there are users" do
   10.times { User.gen }
 end
 
-When "I look at my profile" do
+When "I look at the user's profile" do
   visit resource(@user)
 end
 
