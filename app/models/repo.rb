@@ -41,9 +41,9 @@ class Repo
     r = []
     page_size = 50
     begin
-      page = repo.commits('master', page_size, @commit_count)
+      page = repo.commits('master', page_size, self.commit_count)
       r = r + page
-      @commit_count = @commit_count + page.size
+      self.commit_count = self.commit_count + page.size
     end while (page.size == page_size)
     r
   end

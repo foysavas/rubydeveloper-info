@@ -66,9 +66,7 @@ class User
 
   def set_invite_depth
     unless inviter.nil?
-      @invite_depth = inviter.invite_depth + 1
-    else
-      @invite_depth = 0
+      self.invite_depth = inviter.invite_depth + 1
     end
   end
 
