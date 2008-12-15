@@ -9,7 +9,7 @@
 - unless @user.twitter.blank?
   %h4== Twitter Username: <a href="http://twitter.com/#{h @user.twitter}">#{h @user.twitter}</a>
 - unless @user.homepage.blank?
-  %h4== Homepage: <a href="#{h @user.homepage}">#{h @user.homepage}</a>
+  %h4== Homepage: <a href="#{remote_url(@user.homepage)}">#{h @user.homepage}</a>
 
 - unless @user.projects.empty?
   %h4== Contributor to #{@user.projects.collect{|p| p.name}.join(', ') }

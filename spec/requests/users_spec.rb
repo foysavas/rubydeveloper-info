@@ -78,6 +78,16 @@ describe "resource(@user)", :given => "a user exists" do
     it "responds successfully" do
       @response.should be_successful
     end
+
+    it "should render the homepage link correctly" do
+      User.first.update_attributes(:homepage => 'foysavas.com')
+      r = request(resource(User.first))
+      r.body.to_s.should =~ Regexp.new('<a href="http://foysavas.com"')
+      User.first.update_attributes(:homepage => 'http://foysavas.com')
+      r = request(resource(User.first))
+      r.body.to_s.should =~ Regexp.new('<a href="http://foysavas.com"')
+    end
+
   end    
 end
 
