@@ -15,7 +15,7 @@ class Repo
   belongs_to :project
 
   def check
-    authors = lastest_authors
+    authors = latest_authors
     known_authors = Contribution.all(:email.in => authors, :project_id => project_id)
     new_authors = authors - known_authors
     Contribution.bulk_insert(new_authors, project_id)
